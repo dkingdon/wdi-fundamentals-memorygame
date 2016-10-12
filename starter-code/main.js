@@ -18,17 +18,15 @@ else {
 }
 */
 
-// 10.7 step 4-10 think this is right, not sure how to test it. 
+// 10.7 step 4-10 Note: had to defer js script in html to make this work.  
 var createCards = function() {
 	var gameBoard = document.getElementById('game-board');
-//var toAdd = document.createDocumentFragment(); -- from the internet
-	for (var i = 0; i <= 4; i++) {
+	for (var i = 0; i < 4; i++) {
 		var newDiv = document.createElement('div');
 		newDiv.className = "card";
 		gameBoard.appendChild(newDiv)
-		//toAdd.appendChild(newDiv); -- from the internet	
 	}
 }
 createCards();
-//document.addEventListener('onload', createCards());
+
 
