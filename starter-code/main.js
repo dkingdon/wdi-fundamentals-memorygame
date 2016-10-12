@@ -1,6 +1,6 @@
 console.log("JS file is connected to HTML! Woo!")
 
-/* Declaring card variables */
+/* Declaring card variables 
 var cardOne = "king";
 var cardTwo = "king";
 var cardThree = "queen";
@@ -16,15 +16,19 @@ else if (cardThree == cardFour) {
 else {
 	alert("Sorry, try again")
 }
+*/
 
-/* 
-Note: Saving for later as this might be cleaner code.
-var choiceOne
-var choiceTwo
- 
-if (choiceOne == choiceTwo) {
-	alert("You found a match!");
+// 10.7 step 4-10 think this is right, not sure how to test it. 
+var createCards = function() {
+	var gameBoard = document.getElementById('game-board');
+//var toAdd = document.createDocumentFragment(); -- from the internet
+	for (var i = 0; i <= 4; i++) {
+		var newDiv = document.createElement('div');
+		newDiv.className = "card";
+		gameBoard.appendChild(newDiv)
+		//toAdd.appendChild(newDiv); -- from the internet	
+	}
 }
-else {
-	alert("Sorry, try again");
-} */ 
+createCards();
+//document.addEventListener('onload', createCards());
+
