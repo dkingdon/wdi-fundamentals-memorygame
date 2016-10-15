@@ -40,11 +40,15 @@ var isTwoCards = function() {
 
 // Unit 11.6 step 5 
 var isMatch = function(cards){
-	if (card[0] == card[1]) {
+	if (cards[0] == cards[1]) {
 		alert("You found a match!");
 	}
 	else {
 		alert("Sorry, try again");
+		/* Unit 11.6 step 9: couldnt figure out how to remove the innerHTML without
+		bunch of code so i decided to use page reload. Found this on the webs.
+		not sure how it works, just know that it does!! */ 
+		window.location.reload(true); 
 	}
 }
 
