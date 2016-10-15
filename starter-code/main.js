@@ -19,25 +19,33 @@ var createCards = function() {
 		gameBoard.appendChild(newDiv);
 	}
 }
-createCards();
+
 
 // Unit 11.6 step 6
 var isTwoCards = function() {
 	cardsInPlay.push(this.getAttribute("data-card"));
-		if (cardsInPlay.length == 2) {
-			isMatch(cardsInPlay);
-			cardsInPlay = [];
+		// Unit 11.6 step 8
+		if (this.getAttribute("data-card") == "king") {
+			this.innerHTML = '<img src = "images/king.png" alt = "King of Spades">';
 		}
+		else {
+			this.innerHTML = '<img src = "images/queen.png" alt = "Queen of Clubs">';
+		}
+			// Unit 11.6 step 6
+			if (cardsInPlay.length == 2) {
+				isMatch(cardsInPlay);
+				cardsInPlay = [];
+			}
 }
 
 // Unit 11.6 step 5 
-var isMatch = function(choiceOne, choiceTwo){
-	if (choiceOne == choiceTwo) {
-		alert("You found a match");
+var isMatch = function(cards){
+	if (card[0] == card[1]) {
+		alert("You found a match!");
 	}
 	else {
 		alert("Sorry, try again");
 	}
 }
 
-
+createCards();

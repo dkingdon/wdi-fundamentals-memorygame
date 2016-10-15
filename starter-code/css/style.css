@@ -60,6 +60,13 @@ nav a:hover {
 	float: left;
 	margin: 8%;
 }
+
+/* flipped cards css */
+img {
+	height: 200px;
+	width: 150px;
+}
+
 .name {
 	color: #ff0000;
 }
